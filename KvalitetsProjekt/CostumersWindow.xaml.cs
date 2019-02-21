@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace GUI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CostumersWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CostumersWindow : Window
     {
-        public MainWindow()
+        public CostumersWindow()
         {
             InitializeComponent();
-        }
-
-        private void ManageCustomersBtn_Click(object sender, RoutedEventArgs e)
-        {
-            CostumersWindow costumersWindow = new CostumersWindow();
-            costumersWindow.Show();
-            this.Close();
         }
     }
 }
