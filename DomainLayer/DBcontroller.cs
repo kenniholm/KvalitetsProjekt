@@ -12,7 +12,7 @@ namespace DomainLayer
     public class DBcontroller
     {
         private string ConnectionString ="Server=EALSQL1.eal.local; Database= B_DB04_2018; User Id=B_STUDENT04; Password=B_OPENDB04;";
-        public void RegisterCostumer()
+        public void RegisterCustomer()
         {
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
