@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DomainLayer
 {
-    class SaleOrderLine
+    public class SaleOrderLine
     {
+        int Quantity { get; set; }
+        float Price { get; set; }
+        bool Recieved { get; set; }
     }
 }
