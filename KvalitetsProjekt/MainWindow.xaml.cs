@@ -31,5 +31,12 @@ namespace GUI
             costumersWindow.Show();
             this.Close();
         }
+
+        private void RecieveOrderBtn_Click(object sender, RoutedEventArgs e)
+        {
+            RecieveOrderWindow rcv = new RecieveOrderWindow();
+            rcv.Show();
+            this.Close();
+        }
     }
 }

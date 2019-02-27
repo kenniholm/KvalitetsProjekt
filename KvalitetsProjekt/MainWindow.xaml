@@ -9,7 +9,7 @@
     <Grid>
         <Label Content="PrettyHair" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="255,10,0,0" Height="50" Width="262" FontSize="24"/>
         <Label Content="Hovedmenu" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="309,110,0,0" Width="162" FontSize="18"/>
-        <Button Name="RecieveOrderBtn" Content="Recieve Order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="331,186,0,0" Height="32"/>
+        <Button Name="RecieveOrderBtn" Content="Recieve Order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="331,186,0,0" Height="32" Click="RecieveOrderBtn_Click"/>
         <Button Name="ManageCustomersBtn" Content="Manage Customers" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="331,149,0,0" Height="32" Click="ManageCustomersBtn_Click"/>
 
     </Grid>
