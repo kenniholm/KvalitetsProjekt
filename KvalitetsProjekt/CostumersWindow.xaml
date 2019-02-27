@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="CostumersWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="146,136,0,0"/>
+        <TextBox x:Name="customerId" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="146,136,0,0"/>
         <Label Content="Costumer Exists?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,109,0,0" FontWeight="Bold"/>
         <Label Content="Add Costumer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="360,113,0,0" FontWeight="Bold"/>
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="360,139,0,0"/>
@@ -15,14 +15,14 @@
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="360,195,0,0"/>
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="360,223,0,0"/>
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="360,251,0,0"/>
-        <Button Name="AddCustomerBtn" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Margin="394,279,0,0"/>
+        <Button Name="AddCustomerBtn" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Margin="394,279,0,0" Click="AddCustomerBtn_Click"/>
         <Label Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="312,136,0,0" Width="46"/>
         <Label Content="Address:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="303,166,0,0" Width="57"/>
         <Label Content="ZIP:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="326,192,0,0" Width="29"/>
         <Label Content="Town:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="315,220,0,0" Width="43"/>
         <Label Content="Telephone:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="291,248,0,0" Width="69"/>
         <Label Content="Costumer Id:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="69,132,0,0"/>
-        <Button Name="CheckBtn" Content="Check" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="171,163,0,0"/>
+        <Button Name="CheckBtn" Content="Check" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="171,163,0,0" Click="CheckBtn_Click"/>
         <Button Name="BackBtn" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="706,389,0,0" Click="BackBtn_Click"/>
 
     </Grid>

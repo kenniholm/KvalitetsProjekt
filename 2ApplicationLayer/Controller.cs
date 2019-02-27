@@ -8,5 +8,9 @@ namespace _2ApplicationLayer
 {
     public class Controller
     {
+        public void CheckCustomer()
+        {
+
+        }
     }
 }

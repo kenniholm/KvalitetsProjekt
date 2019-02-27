@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="RecieveOrderWindow" Height="450" Width="800">
+        Title="RecieveOrderWindow" Height="450" Width="793.478">
     <Grid>
         <Label Content="Add Order" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,109,0,0" FontWeight="Bold" Height="28" Width="78"/>
         <Label Content="Order Date:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,135,0,0"/>
