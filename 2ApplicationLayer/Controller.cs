@@ -14,5 +14,9 @@ namespace _2ApplicationLayer
         {
             customer.CheckCustomer(id);
         }
+        public void RegisterCustomer()
+        {
+
+        }
     }
 }

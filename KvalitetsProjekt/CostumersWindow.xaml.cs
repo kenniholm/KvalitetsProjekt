@@ -41,6 +41,14 @@ namespace GUI
         private void AddCustomerBtn_Click(object sender, RoutedEventArgs e)
         {
 
+            string Name, Address, ZIP, Town, Telephone;
+            Name = Nametxt.Text;
+            Address = Addresstxt.Text;
+            ZIP = ZIPtxt.Text;
+            Town = Towntxt.Text;
+            Telephone = Telephonetxt.Text;
+
+
         }
     }
 }

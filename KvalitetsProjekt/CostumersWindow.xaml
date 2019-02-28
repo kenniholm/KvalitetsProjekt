@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="CostumersWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="146,136,0,0"/>
+        <TextBox Name="customerId" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="146,136,0,0"/>
         <Label Content="Costumer Exists?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,109,0,0" FontWeight="Bold"/>
         <Label Content="Add Costumer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="360,113,0,0" FontWeight="Bold"/>
         <TextBox Name="Nametxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="360,139,0,0"/>

@@ -23,10 +23,20 @@ namespace DomainLayer
             Town = town;
             Telephone = telephone;
         }
+        public Customer()
+        {
+
+        }
         public Customer Register(string name, string address, string ZIP, string Town, string Telephone)
         {
             Customer cust = new Customer(name, address, ZIP, Town, Telephone);
             return cust;
+        }
+
+        DBcontroller dbConn = new DBcontroller();
+        public string CheckCustomer(int id)
+        {
+            return dbConn.CheckCustomer(id);
         }
     }
 }
