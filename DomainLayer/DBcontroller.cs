@@ -17,11 +17,11 @@ namespace DomainLayer
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = @"INSERT INTO Customer (CustomerName, CustomerAddress, CustomerZIP, CustomerTOWN, CustomerTelephone) VALUES (@CustomerName, @CustomerAddress, @CustomerZIP, @CustomerTOWN, @CustomerTelephone)";
+                SqlCommand cmd = new SqlCommand("CUSTOMER", con);
+                cmd.CommandText = @"INSERT INTO CUSTOMER (CustomerName, CustomerAddress, ZIP, Town, Telephone) VALUES (@CustomerName, @CustomerAddress, @CustomerZIP, @CustomerTOWN, @CustomerTelephone)";
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@CustomerName", cust.Name));
-                cmd.Parameters.Add(new SqlParameter("@CustomeAddress", cust.Address));
+                cmd.Parameters.Add(new SqlParameter("@CustomerAddress", cust.Address));
                 cmd.Parameters.Add(new SqlParameter("@CustomerZIP", cust.ZIP));
                 cmd.Parameters.Add(new SqlParameter("@CustomerTOWN", cust.Town));
                 cmd.Parameters.Add(new SqlParameter("@CustomerTelephone", cust.Telephone));
