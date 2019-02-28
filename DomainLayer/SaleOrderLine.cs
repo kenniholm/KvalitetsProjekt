@@ -10,6 +10,6 @@ namespace DomainLayer
     {
         int Quantity { get; set; }
         float Price { get; set; }
-        bool Recieved { get; set; }
+        bool Received { get; set; }
     }
 }
