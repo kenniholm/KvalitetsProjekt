@@ -31,16 +31,15 @@ namespace GUI
             this.Close();
         }
 
+        private void CheckBtn_Click(object sender, RoutedEventArgs e)
+        {            
+            _2ApplicationLayer.Controller control = new _2ApplicationLayer.Controller();
+            int id = int.Parse(customerId.Text);
+            control.CheckCustomer(id);
+        }
+
         private void AddCustomerBtn_Click(object sender, RoutedEventArgs e)
         {
-            
-            string Name, Address, ZIP, Town, Telephone;
-            Name = Nametxt.Text;
-            Address = Addresstxt.Text;
-            ZIP = ZIPtxt.Text;
-            Town = Towntxt.Text;
-            Telephone = Telephonetxt.Text;
-
 
         }
     }
