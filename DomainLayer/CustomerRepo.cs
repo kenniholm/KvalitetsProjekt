@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DomainLayer
 {
-    class CustomerRepo
+    public class CustomerRepo
     {
+
     }
 }

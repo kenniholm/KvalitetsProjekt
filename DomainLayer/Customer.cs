@@ -8,11 +8,25 @@ namespace DomainLayer
 {
     public class Customer
     {
-        string Id { get; set; }
-        string Name { get; set; }
-        string Address { get; set; }
-        string ZIP { get; set; }
-        string Town { get; set; }
-        string Telephone { get; set; }
+        public int Id { get; private set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string ZIP { get; set; }
+        public string Town { get; set; }
+        public string Telephone { get; set; }
+
+        public Customer(string name, string address, string zip, string town, string telephone)
+        {
+            Name = name;
+            Address = address;
+            ZIP = zip;
+            Town = town;
+            Telephone = telephone;
+        }
+        public Customer Register(string name, string address, string ZIP, string Town, string Telephone)
+        {
+            Customer cust = new Customer(name, address, ZIP, Town, Telephone);
+            return cust;
+        }
     }
 }

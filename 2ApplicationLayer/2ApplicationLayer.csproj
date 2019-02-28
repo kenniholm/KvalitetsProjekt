@@ -44,5 +44,11 @@
     <Compile Include="Controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DomainLayer\3DomainLayer.csproj">
+      <Project>{62e03587-1c08-429c-8533-893e90682a32}</Project>
+      <Name>3DomainLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
