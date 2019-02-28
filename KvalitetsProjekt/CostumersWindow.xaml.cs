@@ -35,7 +35,9 @@ namespace GUI
         {            
             _2ApplicationLayer.Controller control = new _2ApplicationLayer.Controller();
             int id = int.Parse(customerId.Text);
-            control.CheckCustomer(id);
+            
+            string res = control.CheckCustomer(id);
+            CheckRes.Content = res;
         }
 
         private void AddCustomerBtn_Click(object sender, RoutedEventArgs e)
@@ -50,5 +52,6 @@ namespace GUI
             con.RegisterCustomer(Name, Address, ZIP, Town, Telephone);
             MessageBox.Show(string.Format("Customer {0} was added.", Name));
         }
+
     }
 }
