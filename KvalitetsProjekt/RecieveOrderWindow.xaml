@@ -5,19 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="RecieveOrderWindow" Height="450" Width="793.478">
+        Title="RecieveOrderWindow" Height="450" Width="400">
     <Grid>
-        <Label Content="Add Order" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,109,0,0" FontWeight="Bold" Height="28" Width="78"/>
-        <Label Content="Order Date:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,135,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,138,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,166,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,194,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,222,0,0"/>
-        <Label Content="Delivery Date:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,163,0,0"/>
-        <Label Content="Product Type ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="47,194,0,0"/>
-        <Label Content="Quantity:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="85,222,0,0"/>
-        <Button Name="AddOrderBtn" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="186,250,0,0"/>
-        <Button Name="BackBtn" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="707,389,0,0" Click="BackBtn_Click"/>
+        <Label Content="Tilfoej ordre" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,109,0,0" FontWeight="Bold" Height="28" Width="85"/>
+        <Label Content="Kunde id:" HorizontalAlignment='Left' VerticalAlignment="Top" Margin="80,135,0,0"/>
+        <Label Content="Ordre Dato:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,165,0,0"/>
+        <Label Content="Leverings Dato:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="48,191,0,0"/>
+        <Label Content="Produkt Type ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="43,219,0,0"/>
+        <Label Content="Antal:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="101,245,0,0"/>
+        
+        <TextBox x:Name="kundeId" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,138,0,0"/>
+        <TextBox x:Name="ordreDato" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,166,0,0"/>
+        <TextBox x:Name="leveringsDato" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,194,0,0"/>
+        <TextBox x:Name="produktTypeId" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,222,0,0"/>
+        <TextBox x:Name="antal" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,250,0,0"/>
+        
+        <Button Name="AddOrderBtn" Content="Tilfoej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="186,280,0,0" Click="AddOrderBtn_Click"/>
+        <Button Name="BackBtn" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="300,389,0,0" Click="BackBtn_Click"/>
 
     </Grid>
 </Window>
