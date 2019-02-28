@@ -18,5 +18,10 @@ namespace _2ApplicationLayer
         {
 
         }
+        public void AddOrder(int id, string orderDate, string deliveryDate, int productId, int amount, bool picked)
+        {
+            Order Order = new Order();
+            Order.AddOrderLine(id, orderDate, deliveryDate, productId, amount, picked);
+        }
     }
 }

@@ -45,9 +45,22 @@ namespace DomainLayer
             conn.Close();
             throw new Exception("der findes ikke en bruger med det id");
         }
-        public void RegisterOrder()
+        public void RegisterOrder(Order order)
         {
-
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = @"INSERT INTO ORDERS (Customer, OrderId, OrderDate, DeliveryDate, Picked) VALUES (@Customer, @OrderId, @OrderDate, @DeliveryDate, @Picked)";
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@Customer", order.Id));
+                cmd.Parameters.Add(new SqlParameter("@OrderId", order.OrderDate));
+                cmd.Parameters.Add(new SqlParameter("@OrderDate", order.OrderDate));
+                cmd.Parameters.Add(new SqlParameter("@DeliveryDate", order.DeliveryDate));
+                cmd.Parameters.Add(new SqlParameter("@Picked", order.Picked));
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
         }
     }
 }

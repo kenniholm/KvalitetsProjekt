@@ -33,8 +33,19 @@ namespace GUI
 
         private void AddOrderBtn_Click(object sender, RoutedEventArgs e)
         {
-            _2ApplicationLayer.Controller AddOrderControl = new _2ApplicationLayer.Controller();
+            string orderDate, deliveryDate;
+            int customerId, productId, amount;
+            bool picked;
+            customerId = int.Parse(customerId_txt.Text);
+            orderDate = orderDate_txt.Text;
+            deliveryDate = deliveryDate_txt.Text;
+            productId = int.Parse(productId_txt.Text);
+            amount = int.Parse(amount_txt.Text);
+            picked = false;
+            
 
+            _2ApplicationLayer.Controller AddOrderControl = new _2ApplicationLayer.Controller();
+            AddOrderControl.AddOrder(customerId, orderDate, deliveryDate, productId, amount, picked);
         }
     }
 }

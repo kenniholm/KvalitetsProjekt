@@ -11,14 +11,14 @@
         <Label Content="Kunde id:" HorizontalAlignment='Left' VerticalAlignment="Top" Margin="80,135,0,0"/>
         <Label Content="Ordre Dato:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,165,0,0"/>
         <Label Content="Leverings Dato:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="48,191,0,0"/>
-        <Label Content="Produkt Type ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="43,219,0,0"/>
+        <Label Content="Produkt ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,219,0,0"/>
         <Label Content="Antal:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="101,245,0,0"/>
         
-        <TextBox x:Name="kundeId" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,138,0,0"/>
-        <TextBox x:Name="ordreDato" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,166,0,0"/>
-        <TextBox x:Name="leveringsDato" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,194,0,0"/>
-        <TextBox x:Name="produktTypeId" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,222,0,0"/>
-        <TextBox x:Name="antal" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,250,0,0"/>
+        <TextBox x:Name="customerId_txt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,138,0,0"/>
+        <TextBox x:Name="orderDate_txt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,166,0,0"/>
+        <TextBox x:Name="deliveryDate_txt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,194,0,0"/>
+        <TextBox x:Name="productId_txt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,222,0,0"/>
+        <TextBox x:Name="amount_txt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="141,250,0,0"/>
         
         <Button Name="AddOrderBtn" Content="Tilfoej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="186,280,0,0" Click="AddOrderBtn_Click"/>
         <Button Name="BackBtn" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="300,389,0,0" Click="BackBtn_Click"/>
