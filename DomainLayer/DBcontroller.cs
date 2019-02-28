@@ -52,13 +52,13 @@ namespace DomainLayer
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("ORDER", con);
-                cmd.CommandText = @"INSERT INTO ORDER (OrderDate, DeliveryDate, Picked, CustomerId) VALUES (@OrderDate, @DeliveryDate, @Picked, @CustomerId)";
+                SqlCommand cmd = new SqlCommand("ORDERS", con);
+                cmd.CommandText = @"INSERT INTO ORDERS (OrderDate, DeliveryDate, Picked, CustomerId) VALUES (@OrderDate, @DeliveryDate, @Picked, @CustomerId)";
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("@OrderDate", deliveryDate));
-                cmd.Parameters.Add(new SqlParameter("@DeliveryDate", productId));
+                cmd.Parameters.Add(new SqlParameter("@OrderDate", orderDate));
+                cmd.Parameters.Add(new SqlParameter("@DeliveryDate", deliveryDate));                
                 cmd.Parameters.Add(new SqlParameter("@Picked", picked));
-                cmd.Parameters.Add(new SqlParameter("@Customer", id));
+                cmd.Parameters.Add(new SqlParameter("@CustomerId", id));
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
