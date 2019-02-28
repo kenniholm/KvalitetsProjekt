@@ -21,9 +21,21 @@ namespace DomainLayer
                 cmd.CommandText = @"INSERT INTO";
             }
         }
-        public bool CheckCustomer()
+        public string CheckCustomer(int customerId)
         {
-            return true;
+            SqlConnection conn = new SqlConnection(ConnectionString);
+            string sql = "SELECT * FROM Customer WHERE CustomerID=@id";
+            SqlCommand command = new SqlCommand("SELECT * FROM Customer WHERE CustomerID = @id", conn);
+            command.Parameters.AddWithValue("@id", customerId);
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    return String.Format("{0}", reader["id"]);
+                }
+            }
+            conn.Close();
+            throw new Exception("der findes ikke en bruger med det id");
         }
         public void RegisterOrder()
         {

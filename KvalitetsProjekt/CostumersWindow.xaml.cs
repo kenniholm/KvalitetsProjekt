@@ -32,20 +32,10 @@ namespace GUI
         }
 
         private void CheckBtn_Click(object sender, RoutedEventArgs e)
-        {
-            // Call method in Controller
+        {            
             _2ApplicationLayer.Controller control = new _2ApplicationLayer.Controller();
-            control.CheckCustomer();
-
-            // Save ReadLine as string in Controller?
-
-            // Call method in DBcontroller to fetch the list of customer ids on the DB
-
-            // Send list back to Controller, maybe substring the list, and compare the two.
-
-            // If same = true, else false
-            
-
+            int id = int.Parse(customerId.Text);
+            control.CheckCustomer(id);
         }
 
         private void AddCustomerBtn_Click(object sender, RoutedEventArgs e)
