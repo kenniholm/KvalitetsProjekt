@@ -48,7 +48,7 @@ namespace GUI
             Town = Towntxt.Text;
             Telephone = Telephonetxt.Text;
             con.RegisterCustomer(Name, Address, ZIP, Town, Telephone);
-            MessageBox.Show("Customer was added.");
+            MessageBox.Show(string.Format("Customer {0} was added.", Name));
         }
     }
 }
