@@ -22,8 +22,9 @@
         <Label Content="Town:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="315,220,0,0" Width="43"/>
         <Label Content="Telephone:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="291,248,0,0" Width="69"/>
         <Label Content="Costumer Id:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="69,132,0,0"/>
-        <Button Name="CheckBtn" Content="Check" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="171,163,0,0"/>
+        <Button Name="CheckBtn" Content="Check" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="171,163,0,0" Click="CheckBtn_Click"/>
         <Button Name="BackBtn" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="706,389,0,0" Click="BackBtn_Click"/>
+        <Label Name="CheckRes" HorizontalAlignment="Left" Margin="146,195,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

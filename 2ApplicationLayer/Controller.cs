@@ -10,9 +10,9 @@ namespace _2ApplicationLayer
     public class Controller
     {
         Customer customer = new Customer();
-        public void CheckCustomer(int id)
+        public string CheckCustomer(int id)
         {
-            customer.CheckCustomer(id);
+            return customer.CheckCustomer(id);
         }
         public void RegisterCustomer(string name, string address, string zip, string town, string telephone)
         {

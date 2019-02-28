@@ -33,17 +33,19 @@ namespace DomainLayer
         {
             SqlConnection conn = new SqlConnection(ConnectionString);
             string sql = "SELECT * FROM Customer WHERE CustomerID=@id";
-            SqlCommand command = new SqlCommand("SELECT * FROM Customer WHERE CustomerID = @id", conn);
+            SqlCommand command = new SqlCommand("SELECT * FROM CUSTOMER WHERE CustomerId = @id", conn);
             command.Parameters.AddWithValue("@id", customerId);
+            conn.Open();
             using (SqlDataReader reader = command.ExecuteReader())
             {
                 if (reader.Read())
                 {
-                    return String.Format("{0}", reader["id"]);
+                    string res = String.Format("{0} {1}", reader["CustomerId"], reader["CustomerName"]);
+                    return res;
                 }
             }
             conn.Close();
-            throw new Exception("der findes ikke en bruger med det id");
+            return "Bruger findes ikke";
         }
         public void RegisterOrder(int id, string orderDate, string deliveryDate, int productId, int amount, bool picked)
         {
