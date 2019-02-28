@@ -27,10 +27,10 @@ namespace DomainLayer
         {
 
         }
-        public Customer Register(string name, string address, string ZIP, string Town, string Telephone)
+        public void Register(string name, string address, string ZIP, string Town, string Telephone)
         {
             Customer cust = new Customer(name, address, ZIP, Town, Telephone);
-            return cust;
+            dbConn.RegisterCostumer(cust);
         }
 
         DBcontroller dbConn = new DBcontroller();

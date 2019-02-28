@@ -40,15 +40,14 @@ namespace GUI
 
         private void AddCustomerBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            _2ApplicationLayer.Controller con = new _2ApplicationLayer.Controller();
             string Name, Address, ZIP, Town, Telephone;
             Name = Nametxt.Text;
             Address = Addresstxt.Text;
             ZIP = ZIPtxt.Text;
             Town = Towntxt.Text;
             Telephone = Telephonetxt.Text;
-
-
+            con.RegisterCustomer(Name, Address, ZIP, Town, Telephone);
         }
     }
 }

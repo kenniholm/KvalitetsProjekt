@@ -14,9 +14,9 @@ namespace _2ApplicationLayer
         {
             customer.CheckCustomer(id);
         }
-        public void RegisterCustomer()
+        public void RegisterCustomer(string name, string address, string zip, string town, string telephone)
         {
-
+            customer.Register(name, address, zip, town, telephone);
         }
     }
 }
