@@ -45,22 +45,22 @@ namespace DomainLayer
             conn.Close();
             throw new Exception("der findes ikke en bruger med det id");
         }
-        public void RegisterOrder(Order order)
+        public void RegisterOrder(int id, string orderDate, string deliveryDate, int productId, int amount, bool picked)
         {
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = @"INSERT INTO ORDERS (Customer, OrderId, OrderDate, DeliveryDate, Picked) VALUES (@Customer, @OrderId, @OrderDate, @DeliveryDate, @Picked)";
+                SqlCommand cmd = new SqlCommand("ORDER", con);
+                cmd.CommandText = @"INSERT INTO ORDER (OrderDate, DeliveryDate, Picked, CustomerId) VALUES (@OrderDate, @DeliveryDate, @Picked, @CustomerId)";
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("@Customer", order.Id));
-                cmd.Parameters.Add(new SqlParameter("@OrderId", order.OrderDate));
-                cmd.Parameters.Add(new SqlParameter("@OrderDate", order.OrderDate));
-                cmd.Parameters.Add(new SqlParameter("@DeliveryDate", order.DeliveryDate));
-                cmd.Parameters.Add(new SqlParameter("@Picked", order.Picked));
+                cmd.Parameters.Add(new SqlParameter("@OrderDate", deliveryDate));
+                cmd.Parameters.Add(new SqlParameter("@DeliveryDate", productId));
+                cmd.Parameters.Add(new SqlParameter("@Picked", picked));
+                cmd.Parameters.Add(new SqlParameter("@Customer", id));
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
+
         }
     }
 }

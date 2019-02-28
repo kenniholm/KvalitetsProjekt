@@ -32,7 +32,7 @@ namespace DomainLayer
         public void AddOrderLine(int id, string orderDate, string deliveryDate, int productId, int amount, bool picked)
         {
             DBcontroller dbcontrol = new DBcontroller();
-
+            dbcontrol.RegisterOrder(id, orderDate, deliveryDate, productId, amount, picked);
         }
     }
 }
