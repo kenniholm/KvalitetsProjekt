@@ -30,5 +30,11 @@ namespace GUI
             main.Show();
             this.Close();
         }
+
+        private void AddOrderBtn_Click(object sender, RoutedEventArgs e)
+        {
+            _2ApplicationLayer.Controller AddOrderControl = new _2ApplicationLayer.Controller();
+
+        }
     }
 }
